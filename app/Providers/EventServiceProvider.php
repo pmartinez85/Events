@@ -19,7 +19,7 @@ class EventServiceProvider extends ServiceProvider
         'App\Listeners\NewRegisteredUserEvent' => [
             'App\Listeners\WelcomeEmailListener',
             'App\Listeners\MonitorListener',
-            
+
         ]
 
     ];
