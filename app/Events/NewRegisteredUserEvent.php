@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Listeners;
+namespace App\Events;
 
 use Illuminate\Broadcasting\Channel;
 use Illuminate\Queue\SerializesModels;
@@ -10,6 +10,10 @@ use Illuminate\Foundation\Events\Dispatchable;
 use Illuminate\Broadcasting\InteractsWithSockets;
 use Illuminate\Contracts\Broadcasting\ShouldBroadcast;
 
+/**
+ * Class NewRegisteredUserEvent
+ * @package App\Events
+ */
 class NewRegisteredUserEvent
 {
     use Dispatchable, InteractsWithSockets, SerializesModels;

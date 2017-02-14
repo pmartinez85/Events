@@ -2,10 +2,15 @@
 
 namespace App\Listeners;
 
-use App\Listeners\NewRegisteredUserEvent;
+
+use Illuminate\Auth\Events\Registered;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Contracts\Queue\ShouldQueue;
 
+/**
+ * Class MonitorListener
+ * @package App\Listeners
+ */
 class MonitorListener
 {
     /**
@@ -18,14 +23,15 @@ class MonitorListener
         //
     }
 
+
     /**
-     * Handle the event.
-     *
-     * @param  NewRegisteredUserEvent  $event
-     * @return void
+     * @param Registered $event
      */
-    public function handle(NewRegisteredUserEvent $event)
+    /**
+     * @param Registered $event
+     */
+    public function handle(Registered $event)
     {
-        //
+       // dump('monitor listener executed');
     }
 }

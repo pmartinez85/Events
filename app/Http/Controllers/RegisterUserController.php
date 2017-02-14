@@ -2,12 +2,15 @@
 
 namespace App\Http\Controllers;
 
-use App\Listeners\NewRegisteredUserEvent;
-use Illuminate\Http\Request;
+use App\Events\NewRegisteredUserEvent;
 
+/**
+ * Class RegisterUserController
+ * @package App\Http\Controllers
+ */
 class RegisterUserController extends Controller
 {
-    public function registeruser(){
+    public function registerUser(){
 
         event(new NewRegisteredUserEvent());
     }
