@@ -2,7 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use App\Events\NewRegisteredUserEvent;
+use Illuminate\Auth\Events\Registered;
+use Illuminate\Http\Request;
 
 /**
  * Class RegisterUserController
@@ -10,8 +11,15 @@ use App\Events\NewRegisteredUserEvent;
  */
 class RegisterUserController extends Controller
 {
-    public function registerUser(){
 
-        event(new NewRegisteredUserEvent());
+    public function register()
+    {
+        $user = new \App\User();
+        $user->name = 'Pepito Palotes';
+        $user->email = 'pmartinez1085@gmail.com';
+        event(new Registered($user));
+        dump("Done!");
     }
+
+
 }
