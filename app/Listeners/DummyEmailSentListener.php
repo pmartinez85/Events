@@ -5,6 +5,7 @@ namespace App\Listeners;
 use App\Events\EmailSent;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Contracts\Queue\ShouldQueue;
+use Log;
 
 class DummyEmailSentListener
 {
@@ -27,5 +28,6 @@ class DummyEmailSentListener
     public function handle(EmailSent $event)
     {
         dump("Email Sent OK");
+        Log::info("Email Sent OK");
     }
 }
