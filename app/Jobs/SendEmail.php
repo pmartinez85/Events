@@ -2,6 +2,7 @@
 
 namespace App\Jobs;
 
+use App\Events\EmailSent;
 use Illuminate\Bus\Queueable;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Queue\InteractsWithQueue;

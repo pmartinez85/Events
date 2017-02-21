@@ -26,6 +26,6 @@ class DummyEmailSentListener
      */
     public function handle(EmailSent $event)
     {
-        //
+        dump("Email Sent OK");
     }
 }
