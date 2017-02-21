@@ -29,6 +29,8 @@ class SendEmail implements ShouldQueue
      */
     public function handle()
     {
+        sleep(5);
         dump("Enviant email");
+        event(new EmailSent());
     }
 }
